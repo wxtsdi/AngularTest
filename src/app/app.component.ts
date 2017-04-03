@@ -15,5 +15,11 @@ import { Component } from '@angular/core';
     styles:["width:500px;height:30px;background-color:blue"]
 })
 export class AppComponent{
-    private names:string[]=['a','b','c'];
+    // private names:string[]=['a','b','c'];
+    // private ids:number[]=[1,2,3,4];
+    private id:number=1;
+    buttonClick(){
+     this.id++;
+
+    }
 }

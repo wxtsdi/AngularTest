@@ -6,5 +6,5 @@ import { Component,Input } from '@angular/core';
     styles:[`width:500px;height:30px;color:blue`]
 })
 export class RectComponent{
-    @Input() RectName:string;
+    @Input() id:number;
 }

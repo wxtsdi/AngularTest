@@ -1,7 +1,11 @@
 <div>
     主页模块
+    <button type="button" (click)="buttonClick()">+1</button>
 </div>
-<li *ngFor="let name of names">
-<my-rect [RectName]="name"></my-rect>
-</li>
+<!--<li *ngFor="let id of ids">
+    <my-rect [id]="id"></my-rect>
+</li>-->
 
+
+
+<my-rect [id]="id"></my-rect>
