@@ -1,6 +1,5 @@
 <div>
-    主页模块
-    <button type="button" (click)="buttonClick()">+1</button>
+    子模块消息：{{msgFromChild}}
 </div>
 <!--<li *ngFor="let id of ids">
     <my-rect [id]="id"></my-rect>
@@ -8,4 +7,4 @@
 
 
 
-<my-rect [id]="id"></my-rect>
+<my-rect [id]="id" (onSend)="showMessage($event)"></my-rect>

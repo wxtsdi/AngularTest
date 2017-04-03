@@ -1,3 +1,4 @@
 <div id="rect">
-    矩形模块:{{id}}
+    <input [value]="message" #msg>
+    <button type="button" (click)="buttonClick(msg.value)">Go</button>
 </div>
