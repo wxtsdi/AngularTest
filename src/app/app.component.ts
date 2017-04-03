@@ -14,4 +14,6 @@ import { Component } from '@angular/core';
     templateUrl:"./app.component.html",
     styles:["width:500px;height:30px;background-color:blue"]
 })
-export class AppComponent{}
+export class AppComponent{
+    private names:string[]=['a','b','c'];
+}

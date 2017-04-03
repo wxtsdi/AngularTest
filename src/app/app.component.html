@@ -1,4 +1,7 @@
 <div>
     主页模块
 </div>
-<my-rect></my-rect>
+<li *ngFor="let name of names">
+<my-rect [RectName]="name"></my-rect>
+</li>
+
