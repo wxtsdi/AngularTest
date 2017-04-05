@@ -1,10 +1,18 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
     selector:"my-rect",
-    templateUrl:"./rect.component.html",
-    styles:[`width:500px;height:30px;color:blue`]
+    templateUrl:"./rect.component.html"
 })
 export class RectComponent{
-    @Input() RectName:string;
+    @Input() id:number;
+    @Output() onSend=new EventEmitter<string>();
+
+    private message:string="";
+    buttonClick(value:string){
+        this.onSend.emit(value);
+        console.log("子模块发出："+value);
+    }
+
+
 }

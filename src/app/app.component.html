@@ -1,7 +1,10 @@
 <div>
-    主页模块
+    子模块消息：{{msgFromChild}}
 </div>
-<li *ngFor="let name of names">
-<my-rect [RectName]="name"></my-rect>
-</li>
+<!--<li *ngFor="let id of ids">
+    <my-rect [id]="id"></my-rect>
+</li>-->
 
+
+
+<my-rect [id]="id" (onSend)="showMessage($event)"></my-rect>
