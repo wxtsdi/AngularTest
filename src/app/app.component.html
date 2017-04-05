@@ -2,10 +2,13 @@
 
 
 
-子模块消息<input type="text" name="msg" [(ngModel)]="msgFromChild">
+子模块消息<input type="text" name="msg" [(ngModel)]="msgFromChild" > 
+
+
+
 <div style="height: 60;width: 100%;background-color: lightblue">
     {{msgFromChild}}
 </div>
 
-<my-rect [id]="id" (onSend)="showMessage($event)"></my-rect>
+<my-rect (onSend)="showMessage($event)"></my-rect>
 <!--</form>-->

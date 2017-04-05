@@ -2,7 +2,8 @@ import { Component,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
     selector:"my-rect",
-    templateUrl:"./rect.component.html"
+    templateUrl:"./rect.component.html",
+    styleUrls:["./rect.component.css"]
 })
 export class RectComponent{
     @Input() id:number;

@@ -1,4 +1,9 @@
 <div id="rect">
-    <input [value]="message" #msg>
+<input [ngModel]="message"  #msgControl="ngModel" required minlength="3" #msg>
+
     <button type="button" (click)="buttonClick(msg.value)">Go</button>
+
+<span [hidden]="msgControl.valid || msgControl.pristine">不满足规定</span>
+
+
 </div>

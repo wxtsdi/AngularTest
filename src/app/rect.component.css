@@ -1,0 +1,13 @@
+.ng-valid{
+    border: 1px solid #0ef;
+    border-right: 15px solid #0f0;
+}
+
+.ng-invalid{
+    border: 1px solid #0ef;
+    border-right: 15px solid #f00;
+}
+
+.ng-pristine{
+    border: 1px solid #0ef;
+}
