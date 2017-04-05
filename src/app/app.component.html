@@ -1,10 +1,11 @@
-<div>
-    子模块消息：{{msgFromChild}}
+<!--<form>-->
+
+
+
+子模块消息<input type="text" name="msg" [(ngModel)]="msgFromChild">
+<div style="height: 60;width: 100%;background-color: lightblue">
+    {{msgFromChild}}
 </div>
-<!--<li *ngFor="let id of ids">
-    <my-rect [id]="id"></my-rect>
-</li>-->
-
-
 
 <my-rect [id]="id" (onSend)="showMessage($event)"></my-rect>
+<!--</form>-->

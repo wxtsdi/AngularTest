@@ -1,12 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'my-app',
-//   template: `<h1>Hello {{name}}</h1>`,
-// })
-// export class AppComponent  { name = 'Angular'; }
-
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -18,6 +9,6 @@ export class AppComponent {
     private msgFromChild:string="";
     showMessage(obj:any) {
         console.log("父模块开始接收");
-        this.msgFromChild+=obj;
+        this.msgFromChild=obj;
     }
 }
