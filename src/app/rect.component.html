@@ -1,9 +1,18 @@
 <div id="rect">
-<input [ngModel]="message"  #msgControl="ngModel" required minlength="3" #msg>
+    
+    <div id="withoutParam">
+        没有参数的指令
+        <input [ngModel]="message" #msgControl="ngModel" required minlength="3" #msg backgroundChange>
+        <button type="button" (click)="buttonClick(msg.value)">Go</button>
+        <span [hidden]="msgControl.valid || msgControl.pristine">不满足规定</span>
+    <!--</div>-->
+    <div id="withParam">
+        有参数的指令
 
-    <button type="button" (click)="buttonClick(msg.value)">Go</button>
-
-<span [hidden]="msgControl.valid || msgControl.pristine">不满足规定</span>
+        <input [ngModel]="message" #msgControl1="ngModel" required minlength="3" #msg1 changeBackground="red">
+        <button type="button" (click)="buttonClick(msg1.value)">Go</button>
+        <span [hidden]="msgControl1.valid || msgControl1.pristine">不满足规定</span>
+    </div>
 
 
 </div>
