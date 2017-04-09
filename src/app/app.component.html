@@ -1,8 +1,5 @@
-
-子模块消息<input type="text" name="msg" [(ngModel)]="msgFromChild" > 
-
-<!--<div style="height: 60;width: 100%;background-color: lightblue">
-    {{msgFromChild}}
-</div>-->
-
-<my-rect (onSend)="showMessage($event)"></my-rect>
+<h1>Template消息演示</h1>
+<button type="button" (click)="addChildComp()">添加子模块</button>
+<template #rectTemp>
+    <my-rect></my-rect>
+</template>
