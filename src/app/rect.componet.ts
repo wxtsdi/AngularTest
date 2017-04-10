@@ -1,19 +1,24 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
+import { SharedService } from "./sharedService.service";
 
-@Component({
+@Component({ 
     selector:"my-rect",
     templateUrl:"./rect.component.html",
-    styleUrls:["./rect.component.css"]
+    styleUrls:["./rect.component.css"],
+    providers:[SharedService]
 })
 export class RectComponent{
-    @Input() id:number;
     @Output() onSend=new EventEmitter<string>();
 
-    private message:string="";
+    private sharedService:SharedService;
+  
     buttonClick(value:string){
-        this.onSend.emit(value);
-        console.log("子模块发出："+value);
+         var pr:number=this.sharedService.GetPrice(value);
+         this.onSend.emit(pr.toString());       
     }
 
+    constructor(private _sharedService:SharedService){
+        this.sharedService=_sharedService;
+    }
 
 }

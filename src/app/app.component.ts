@@ -16,7 +16,7 @@ export class AppComponent  {
 
     showMessage(obj: any) {
         console.log("父模块开始接收");
-        this.msgFromChild = obj;
+        this.msgFromChild = "价格："+obj;
     }
 
     addChildComp() {

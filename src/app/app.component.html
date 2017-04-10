@@ -1,5 +1,5 @@
-<h1>Template消息演示</h1>
+<h1>{{msgFromChild}}</h1>
 <button type="button" (click)="addChildComp()">添加子模块</button>
-<template #rectTemp>
-    <my-rect></my-rect>
-</template>
+<ng-template #rectTemp>
+    <my-rect (onSend)="showMessage($event)"></my-rect>
+</ng-template>
