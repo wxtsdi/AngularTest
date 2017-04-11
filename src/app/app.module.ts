@@ -6,10 +6,12 @@ import { RectComponent } from './rect.componet';
 import { FormsModule } from '@angular/forms';
 import { backgroundChangeDirective,changeBackgroundDirective } from './backgroundChange.directive';
 
+import { HttpModule,JsonpModule } from "@angular/http";
+
 @NgModule({
-  imports:      [ BrowserModule,FormsModule ],
+  imports:      [ BrowserModule,FormsModule,HttpModule,JsonpModule ],
   declarations: [ AppComponent,RectComponent,backgroundChangeDirective,changeBackgroundDirective ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
 })
 export class AppModule { }
 

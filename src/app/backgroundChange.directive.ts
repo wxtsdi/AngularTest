@@ -6,8 +6,6 @@ import { Directive,ElementRef,Input } from '@angular/core';
 export class backgroundChangeDirective {
     constructor(el:ElementRef) {
         el.nativeElement.style.backgroundColor='yellow';
-        console.log("backgroundChangeDirective run");
-        
     }
 }
 
@@ -19,13 +17,10 @@ export class changeBackgroundDirective {
 private el:HTMLElement;
 
     @Input('changeBackground') set backColor(colorName:string){
-        console.log("target");
-        
         this.el.style.backgroundColor=colorName;
     }
     
     constructor(el:ElementRef) {
-        console.log("changeBackgroundDirective initiated");
         this.el=el.nativeElement;
     }
 

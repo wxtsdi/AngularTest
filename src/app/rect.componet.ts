@@ -13,12 +13,14 @@ export class RectComponent{
     private sharedService:SharedService;
   
     buttonClick(value:string){
-         var pr:number=this.sharedService.GetPrice(value);
-         this.onSend.emit(pr.toString());       
+         var pr:any=this.sharedService.GetValue(value);
+         this.onSend.emit(pr);       
     }
 
     constructor(private _sharedService:SharedService){
         this.sharedService=_sharedService;
+        console.log("child view constructed!");
+        
     }
 
 }
