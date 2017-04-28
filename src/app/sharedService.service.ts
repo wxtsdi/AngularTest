@@ -24,9 +24,10 @@ export class SharedService {
     }
 
     LoadData() {
-        this._http.get('./PriceData.json')
+        //this._http.get('./PriceData.json')
+         this._http.get('http://localhost:8081/items')
             .map(res => res.json())   //将response字符串映射成json对象
-            .subscribe(prices => { this.ItemPrices = prices; console.log("prices loaded"); });
+            .subscribe(prices => { this.ItemPrices = prices; console.log("prices loaded"); console.dir(prices)});
     }
 }
 
